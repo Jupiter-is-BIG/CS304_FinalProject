@@ -74,7 +74,7 @@ $url = "addcart.php?id=" . $row['productId'] . "&name=" . urlencode($row['produc
             <?php if ($row['productImage']) { ?>
                 <img src="displayImage.php?id=<?php echo $row['productId'];?>" alt="BLOB Image" class="w-full h-auto rounded-lg shadow-lg">
             <?php } else { ?>
-                <img src="./img/nan.png" alt="BLOB Image" class="w-full h-auto rounded-lg shadow-lg">
+                <img src="../img/nan.png" alt="BLOB Image" class="w-full h-auto rounded-lg shadow-lg">
             <?php } ?>
         </div>
     </div>

@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-cover bg-center bg-fixed h-screen w-screen" style="background-image: url('./img/background.jpg');">
+<body class="bg-cover bg-center bg-fixed h-screen w-screen" style="background-image: url('../img/background.jpg');">
 
     <!-- Navigation Bar -->
     

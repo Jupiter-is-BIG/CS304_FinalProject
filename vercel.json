@@ -4,7 +4,7 @@
     },
     "routes": [
         { "src": "/(.+.php)", "dest": "/api/$1" },
-        { "src": "/img/(.+.jpg)", "dest": "/api/img/$1" },
+        { "src": "/img/(.+.jpg)", "dest": "/img/$1" },
         { "src": "/ddl/(.*)", "dest": "/api/ddl/$1" },
         { "src": "/(.*)", "dest": "/api/index.php" }
     ]
