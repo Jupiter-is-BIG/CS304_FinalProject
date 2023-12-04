@@ -23,12 +23,12 @@
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-semibold">Ray's Groceries</h1>
             <div class="flex space-x-4">
-                <a href="login.php" class="hover:text-gray-300">Login</a>
-                <a href="listprod.php" class="hover:text-gray-300">Begin Shopping</a>
-                <a href="listorder.php" class="hover:text-gray-300">List All Orders</a>
-                <a href="customer.php" class="hover:text-gray-300">My Profile</a>
-                <a href="admin.php" class="hover:text-gray-300">Administrators</a>
-                <a href="logout.php" class="hover:text-gray-300">Log Out</a>
+                <a href="../login.php" class="hover:text-gray-300">Login</a>
+                <a href="../listprod.php" class="hover:text-gray-300">Begin Shopping</a>
+                <a href="../listorder.php" class="hover:text-gray-300">List All Orders</a>
+                <a href="../customer.php" class="hover:text-gray-300">My Profile</a>
+                <a href="../admin.php" class="hover:text-gray-300">Administrators</a>
+                <a href="../logout.php" class="hover:text-gray-300">Log Out</a>
             </div>
         </div>
     </nav>
@@ -57,7 +57,7 @@
 
         <!-- Call-to-action button -->
         <div>
-            <a href="listprod.php" class="bg-blue-500 text-white py-3 px-6 rounded-md hover:bg-blue-600">Begin Shopping</a>
+            <a href="../listprod.php" class="bg-blue-500 text-white py-3 px-6 rounded-md hover:bg-blue-600">Begin Shopping</a>
         </div>
     </div>
     

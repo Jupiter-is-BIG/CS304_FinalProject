@@ -3,7 +3,7 @@
     $authenticatedUser = validateLogin();
     
     if ($authenticatedUser != null)
-        header('Location: index.php');      		// Successful login
+        header('Location: ./api/index.php');      		// Successful login
     else
         header('Location: login.php');	             // Failed login - redirect back to login page with a message     
     

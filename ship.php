@@ -73,7 +73,7 @@ if(!$db_select) die("Database selection failed: " . mysqli_error());
 	mysqli_close($con);
 ?>
 
-<h2><a href="index.php">Back to Main Page</a></h2>
+<h2><a href="./api/index.php">Back to Main Page</a></h2>
 
 </body>
 </html>

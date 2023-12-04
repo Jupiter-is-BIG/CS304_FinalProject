@@ -118,7 +118,7 @@ if (mysqli_query($con, $sql)) {
         <?php
     }
 	?> <p>Total Amount: $<?php echo $total; ?></p>
-	<a href="index.php" class= "text-lg text-center">Home</a><?php
+	<a href="./api/index.php" class= "text-lg text-center">Home</a><?php
     $sql3 = "UPDATE ordersummary SET totalAmount = ? WHERE orderId = ?";
     $stmt2 = $con->prepare($sql3);
     $stmt2->bind_param("di", $total, $orderId);
