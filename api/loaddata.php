@@ -17,7 +17,7 @@
 		die("Database selection failed: " . mysqli_error());
 	}
 	
-	$fileName = "./ddl/SQLServer_orderdb.ddl";
+	$fileName = "../ddl/SQLServer_orderdb.ddl";
 	$file = file_get_contents($fileName, true);
 	$lines = explode(";", $file);
 

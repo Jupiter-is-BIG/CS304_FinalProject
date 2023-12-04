@@ -1,5 +1,9 @@
 <?php 
     session_start();
+    $_SESSION['authenticatedUser'] = null;
+    $_SESSION['loginMessage'] = null;
+    $_SESSION['productList'] = null;
+    
 ?>
 
 <!DOCTYPE html>
