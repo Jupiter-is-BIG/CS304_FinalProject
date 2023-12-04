@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Ray's Grocery - Product Information</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -34,26 +35,30 @@ $row = mysqli_fetch_assoc($result);
 $url = "addcart.php?id=" . $row['productId'] . "&name=" . urlencode($row['productName']) . "&price=" . $row['productPrice'];
 
 // TODO: If there is a productImageURL, display using IMG tag
+?>
+<h1><?php echo $row['productName'];?></h1>
+<?php
 if($row['productImageURL']) {
     ?>  
-        <h1><?php echo $row['productName'];?></h1>
+        
         <img alt="Image" src="<?php echo $row['productImageURL']; ?>">
+    <?php
+}
+?> 
         <h3>Product Id: <?php echo $row['productId'];?></h3>
         <h3>Price: $<?php echo $row['productPrice'];?></h3>
-        <?php 
-            if ($row['productImage']) {
-                ?>
-            <img src="displayImage.php?id=<?php echo $row['productId'];?>" alt="BLOB Image">
-            <?php
-}
-        ?>
+        <?php if ($row['productImage']) { ?>
+                <img src="displayImage.php?id=<?php echo $row['productId'];?>" alt="BLOB Image" class="w-[20%] h-auto rounded-lg shadow-lg">
+            <?php } else { ?>
+                <img src="./img/nan.png" alt="BLOB Image" class="w-[20%] h-auto rounded-lg shadow-lg">
+            <?php } ?>
         <br>
 					<a href = <?php echo $url ?>>Add to cart</a>
 
 					<a href="listprod.php">Continue Shopping</a>
 
     <?php
-}
+
 
 // TODO: Retrieve any image stored directly in database. Note: Call displayImage.php with product id as parameter.
 

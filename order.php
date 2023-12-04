@@ -16,7 +16,7 @@ session_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <script src="https://cdn.tailwindcss.com"></script>
-<title>YOUR NAME Grocery Order Processing</title>
+<title>Ray's Grocerries</title>
 </head>
 <body>
 
