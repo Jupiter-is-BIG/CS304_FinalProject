@@ -1,8 +1,8 @@
 <?php
-	$username = "root";
-	$password = "password";
-	$database = "orders";
-	$server = "cosc304_sqlserver";
-	$hostname = "127.0.0.1";
+	$username = "sql3667484";
+	$password = "p1ZLbB7f1L";
+	$database = "sql3667484";
+	$server = "sql3.freemysqlhosting.net";
+	$hostname = "sql3.freemysqlhosting.net";
 	$connectionInfo = array( "Database"=>$database, "UID"=>$username, "PWD"=>$password, "CharacterSet" => "UTF-8", "TrustServerCertificate"=>"yes", "HOST"=>$hostname);
 ?>

@@ -150,6 +150,35 @@
         </div>
 
     </div>
+    <!-- Product Image Upload Form Section -->
+<div class="bg-white p-8 rounded-md shadow-md mt-8">
+    <h2 class="text-2xl font-semibold mb-4">Upload Product Image</h2>
+
+    <form action="upload_image.php" method="post" enctype="multipart/form-data">
+        <div class="mb-4">
+            <label for="productId" class="block text-sm font-medium text-gray-700">Product ID:</label>
+            <input type="text" name="productId" id="productId" class="mt-1 p-2 border rounded-md w-full" required>
+        </div>
+        
+        <div class="mb-4">
+            <label for="image" class="block text-sm font-medium text-gray-700">Upload Image:</label>
+            <input type="file" name="image" id="image" accept="image/*" class="mt-1 p-2 border rounded-md w-full" required>
+        </div>
+
+        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md">Upload Image</button>
+    </form>
+</div>
+
+<!-- DATABASE RESET -->
+<div class="bg-white p-8 rounded-md shadow-md mt-8 border-4 border-red-600">
+    <h2 class="text-2xl font-semibold mb-4">Database Restore</h2>
+
+    <form action="loaddata.php" method="post" enctype="multipart/form-data">
+        <div class="Do you want to restore the database?"></div>
+        <button type="submit" class="bg-red-500 text-white py-2 px-4 rounded-md">Restore DB</button>
+    </form>
+</div>
+
 
 </body>
 
