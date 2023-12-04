@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['loginMessage']) && $_SESSION['loginMessage'])
+echo ("<p class='text-red-500'>" . $_SESSION['loginMessage'] . "</p>");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,11 +37,9 @@
 </nav>
 <div class="h-full backdrop-filter  backdrop-blur-md">
     <?php
-        session_start();
-        if ($_SESSION['loginMessage'])
-            echo ("<p class='text-red-500'>" . $_SESSION['loginMessage'] . "</p>");
-
-        if ($_SESSION['authenticatedUser']) {
+        
+       
+        if (isset($_SESSION['authenticatedUser']) && $_SESSION['authenticatedUser']) {
             ?>
 			<div class="w-full h-full flex justify-center items-center">
 				<div class='text-green-500 bg-white p-5 rounded-lg flex justify-center items-center text-black w-1/2'>
