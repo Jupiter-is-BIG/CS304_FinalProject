@@ -38,7 +38,7 @@ session_start();
 </nav>
     <?php
     $productList = null;
-    if (count($_SESSION['productList'])) {
+    if (isset($_SESSION['productList']) && count($_SESSION['productList'])) {
         $productList = $_SESSION['productList'];
     ?>
         <div class="container mx-auto p-8 bg-white rounded-md shadow-md my-8">

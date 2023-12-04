@@ -1,9 +1,5 @@
 <?php 
     session_start();
-    $_SESSION['authenticatedUser'] = null;
-    $_SESSION['loginMessage'] = null;
-    $_SESSION['productList'] = null;
-    
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +35,7 @@
     <div class="flex justify-center items-center ">
     <div class="bg-white bg-opacity-75 backdrop-filter backdrop-blur-lg p-8 rounded-md shadow-md mt-8 mx-auto max-w-2xl">
         <?php 
-            if ($_SESSION['authenticatedUser']) {
+            if (isset($_SESSION['authenticatedUser']) && $_SESSION['authenticatedUser']) {
                 echo ("<p class='text-center text-3xl mb-4'>Welcome, " . $_SESSION['authenticatedUser'] . "!</p>");
             }
         ?>

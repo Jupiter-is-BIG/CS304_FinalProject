@@ -80,7 +80,7 @@ if ($custId) {
 
 		if ($usr["password"] == $p) {
 		
-		if (count($_SESSION['productList'])) {
+		if (isset($_SESSION['productList']) && count($_SESSION['productList'])) {
 			
 			$dateTime = new DateTime();
 $currentDateTime = $dateTime->format("Y-m-d H:i:s");
