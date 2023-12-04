@@ -58,7 +58,7 @@ if(isset($_GET['po'])) {
 <form method="get" action="listprod.php">
     <div class="flex flex-col items-center">
     <?php 
-        if ($_SESSION['authenticatedUser']) {
+        if (isset($_SESSION['authenticatedUser']) && $_SESSION['authenticatedUser']) {
             echo ("<h1 class=\"m-2 text-xl mt-5\"> Welcome " . $_SESSION['authenticatedUser'] . "!</h1>");
         }
         ?>
@@ -124,7 +124,7 @@ if(isset($_GET['po'])) {
 
 	$db_select = mysqli_select_db($con, $connectionInfo["Database"]);
 	if(!$db_select) die("Database selection failed: " . mysqli_error());
-    if ($_SESSION['authenticatedUser'] && $_SESSION['authenticatedUser']!="") {
+    if (isset($_SESSION['authenticatedUser']) && $_SESSION['authenticatedUser'] && $_SESSION['authenticatedUser']!="") {
         $sql2 = "SELECT categoryId,productId,productName,productPrice,productImage,categoryName,count(*) as sales from ordersummary natural join orderproduct natural join product natural join customer natural join category where userid = '" . $_SESSION['authenticatedUser'] . "' group by categoryId,productId,productName,productPrice,productImage,categoryName having sales > 0 order by sales desc limit 5";
         $result2 = mysqli_query($con, $sql2);
         ?>
