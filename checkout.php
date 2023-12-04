@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-cover bg-center bg-fixed backdrop-filter backdrop-blur-md" style="background-image: url('../img/background.jpg');">
+<body class="bg-cover bg-center bg-fixed backdrop-filter backdrop-blur-md" style="background-image: url('./img/background.jpg');">
 
     <div class="flex items-center justify-center h-screen">
         <div class="bg-white bg-opacity-80 backdrop-filter backdrop-blur-md p-8 rounded-md shadow-md max-w-md w-full">

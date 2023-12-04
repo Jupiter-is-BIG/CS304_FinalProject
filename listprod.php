@@ -140,7 +140,7 @@ if(isset($_GET['po'])) {
                         <?php if ($row2['productImage']) { ?>
                             <img src="displayImage.php?id=<?php echo $row2['productId'];?>" alt="Product Image" class="w-full h-[150px] object-cover rounded-lg mb-2">
                         <?php } else { ?>
-                            <img src="../img/nan.png" alt="Product Image" class="w-full h-[150px] object-cover rounded-lg mb-2">
+                            <img src="./img/nan.png" alt="Product Image" class="w-full h-[150px] object-cover rounded-lg mb-2">
                         <?php } ?>
                         <div class="text-lg font-semibold text-gray-800"><?php echo $row2['productName']; ?></div>
                         <div class="text-sm text-gray-500 mb-1"><?php echo $row2['categoryName']; ?></div>
@@ -188,7 +188,7 @@ if(isset($_GET['po'])) {
             <?php if ($row['productImage']) { ?>
                 <img src="displayImage.php?id=<?php echo $row['productId'];?>" alt="BLOB Image" class="w-[20%] h-auto rounded-lg shadow-lg">
             <?php } else { ?>
-                <img src="../img/nan.png" alt="BLOB Image" class="w-[20%] h-auto rounded-lg shadow-lg">
+                <img src="./img/nan.png" alt="BLOB Image" class="w-[20%] h-auto rounded-lg shadow-lg">
             <?php } ?>
 
             <div class="flex flex-col ml-4">
