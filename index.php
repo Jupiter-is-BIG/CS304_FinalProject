@@ -12,9 +12,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-cover bg-center bg-fixed h-screen w-screen" style="background-image: url('../img/background.jpg');">
+<body class="bg-cover bg-center bg-fixed h-screen w-screen" style="background-image: url('./img/background.jpg');">
 
-    <!-- Navigation Bar -->
     
 
     <!-- Main Content -->
@@ -23,12 +22,12 @@
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-semibold">Ray's Groceries</h1>
             <div class="flex space-x-4">
-                <a href="../login.php" class="hover:text-gray-300">Login</a>
-                <a href="../listprod.php" class="hover:text-gray-300">Begin Shopping</a>
-                <a href="../listorder.php" class="hover:text-gray-300">List All Orders</a>
-                <a href="../customer.php" class="hover:text-gray-300">My Profile</a>
-                <a href="../admin.php" class="hover:text-gray-300">Administrators</a>
-                <a href="../logout.php" class="hover:text-gray-300">Log Out</a>
+                <a href="./login.php" class="hover:text-gray-300">Login</a>
+                <a href="./listprod.php" class="hover:text-gray-300">Begin Shopping</a>
+                <a href="./listorder.php" class="hover:text-gray-300">List All Orders</a>
+                <a href="./customer.php" class="hover:text-gray-300">My Profile</a>
+                <a href="./admin.php" class="hover:text-gray-300">Administrators</a>
+                <a href="./logout.php" class="hover:text-gray-300">Log Out</a>
             </div>
         </div>
     </nav>
