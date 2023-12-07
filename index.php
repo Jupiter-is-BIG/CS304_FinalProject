@@ -14,8 +14,7 @@
 
 <body class="bg-cover bg-center bg-fixed h-screen w-screen" style="background-image: url('./img/background.jpg');">
 
-    <!-- Navigation Bar -->
-    
+    <!--Chatgpt used for design and layout of page -->
 
     <!-- Main Content -->
     <div class="w-full h-full backdrop-filter  backdrop-blur-lg">
@@ -23,19 +22,19 @@
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-semibold">Ray's Groceries</h1>
             <div class="flex space-x-4">
-                <a href="login.php" class="hover:text-gray-300">Login</a>
-                <a href="listprod.php" class="hover:text-gray-300">Begin Shopping</a>
-                <a href="listorder.php" class="hover:text-gray-300">List All Orders</a>
-                <a href="customer.php" class="hover:text-gray-300">My Profile</a>
-                <a href="admin.php" class="hover:text-gray-300">Administrators</a>
-                <a href="logout.php" class="hover:text-gray-300">Log Out</a>
+                <a href="./login.php" class="hover:text-gray-300">Login</a>
+                <a href="./listprod.php" class="hover:text-gray-300">Begin Shopping</a>
+                <a href="./listorder.php" class="hover:text-gray-300">List All Orders</a>
+                <a href="./customer.php" class="hover:text-gray-300">My Profile</a>
+                <a href="./admin.php" class="hover:text-gray-300">Administrators</a>
+                <a href="./logout.php" class="hover:text-gray-300">Log Out</a>
             </div>
         </div>
     </nav>
     <div class="flex justify-center items-center ">
     <div class="bg-white bg-opacity-75 backdrop-filter backdrop-blur-lg p-8 rounded-md shadow-md mt-8 mx-auto max-w-2xl">
         <?php 
-            if ($_SESSION['authenticatedUser']) {
+            if (isset($_SESSION['authenticatedUser']) && $_SESSION['authenticatedUser']) {
                 echo ("<p class='text-center text-3xl mb-4'>Welcome, " . $_SESSION['authenticatedUser'] . "!</p>");
             }
         ?>
@@ -57,7 +56,7 @@
 
         <!-- Call-to-action button -->
         <div>
-            <a href="listprod.php" class="bg-blue-500 text-white py-3 px-6 rounded-md hover:bg-blue-600">Begin Shopping</a>
+            <a href="../listprod.php" class="bg-blue-500 text-white py-3 px-6 rounded-md hover:bg-blue-600">Begin Shopping</a>
         </div>
     </div>
     

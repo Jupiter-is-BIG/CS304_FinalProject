@@ -1,6 +1,9 @@
 <?php
     session_start();  
-	$authenticated = $_SESSION['authenticatedUser']  == null ? false : true;
+	if(isset($_SESSION['authenticatedUser'])) $authenticated = $_SESSION['authenticatedUser']  == null ? false : true;
+	else {
+		header('Location: login.php');
+	}
 
 	if (!$authenticated)
 	{

@@ -37,10 +37,10 @@
           <a href="./" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
         </li>
         <li>
-          <a href="../customer.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Profile</a>
+          <a href="./customer.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Profile</a>
         </li>
         <li>
-          <a href="../showcart.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">My Cart</a>
+          <a href="./showcart.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">My Cart</a>
         </li>
       </ul>
     </div>
@@ -58,7 +58,7 @@ if(isset($_GET['po'])) {
 <form method="get" action="listprod.php">
     <div class="flex flex-col items-center">
     <?php 
-        if ($_SESSION['authenticatedUser']) {
+        if (isset($_SESSION['authenticatedUser']) && $_SESSION['authenticatedUser']) {
             echo ("<h1 class=\"m-2 text-xl mt-5\"> Welcome " . $_SESSION['authenticatedUser'] . "!</h1>");
         }
         ?>
@@ -124,7 +124,7 @@ if(isset($_GET['po'])) {
 
 	$db_select = mysqli_select_db($con, $connectionInfo["Database"]);
 	if(!$db_select) die("Database selection failed: " . mysqli_error());
-    if ($_SESSION['authenticatedUser'] && $_SESSION['authenticatedUser']!="") {
+    if (isset($_SESSION['authenticatedUser']) && $_SESSION['authenticatedUser'] && $_SESSION['authenticatedUser']!="") {
         $sql2 = "SELECT categoryId,productId,productName,productPrice,productImage,categoryName,count(*) as sales from ordersummary natural join orderproduct natural join product natural join customer natural join category where userid = '" . $_SESSION['authenticatedUser'] . "' group by categoryId,productId,productName,productPrice,productImage,categoryName having sales > 0 order by sales desc limit 5";
         $result2 = mysqli_query($con, $sql2);
         ?>

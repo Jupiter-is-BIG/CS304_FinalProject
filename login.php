@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['loginMessage']) && $_SESSION['loginMessage'])
+echo ("<p class='text-red-500'>" . $_SESSION['loginMessage'] . "</p>");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +29,7 @@
           <a href="./" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Home</a>
         </li>
         <li>
-          <a href="../listprod.php" class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Shop</a>
+          <a href="./listprod.php" class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Shop</a>
         </li>
       </ul>
     </div>
@@ -30,11 +37,9 @@
 </nav>
 <div class="h-full backdrop-filter  backdrop-blur-md">
     <?php
-        session_start();
-        if ($_SESSION['loginMessage'])
-            echo ("<p class='text-red-500'>" . $_SESSION['loginMessage'] . "</p>");
-
-        if ($_SESSION['authenticatedUser']) {
+        
+       
+        if (isset($_SESSION['authenticatedUser']) && $_SESSION['authenticatedUser']) {
             ?>
 			<div class="w-full h-full flex justify-center items-center">
 				<div class='text-green-500 bg-white p-5 rounded-lg flex justify-center items-center text-black w-1/2'>
@@ -80,7 +85,7 @@
                   </div>
                   <button type="submit" class="my-2 w-full text-white bg-gray-600 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
                   <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                      Don’t have an account yet? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                      Don’t have an account yet? <a href="./createuser.php" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
                   </p>
               </form>
           </div>
@@ -95,6 +100,9 @@
     <?php
         }
     ?>
+
+
+
 
 
 </body>
