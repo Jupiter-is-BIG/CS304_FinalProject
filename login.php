@@ -8,6 +8,7 @@ echo ("<p class='text-red-500'>" . $_SESSION['loginMessage'] . "</p>");
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Chatgpt used for design and layout of page -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Screen</title>

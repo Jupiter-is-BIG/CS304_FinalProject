@@ -14,7 +14,7 @@
 
 <body class="bg-cover bg-center bg-fixed h-screen w-screen" style="background-image: url('./img/background.jpg');">
 
-    
+    <!--Chatgpt used for design and layout of page -->
 
     <!-- Main Content -->
     <div class="w-full h-full backdrop-filter  backdrop-blur-lg">
