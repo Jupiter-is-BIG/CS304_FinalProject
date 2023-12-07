@@ -1,39 +1,39 @@
 <?php
 session_start();
 // Check if form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $email = $_POST['email'];
-    $phonenum = $_POST['phonenum'];
-    // ... add the rest of your form fields here
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     // Get form data
+//     $firstname = $_POST['firstname'];
+//     $lastname = $_POST['lastname'];
+//     $email = $_POST['email'];
+//     $phonenum = $_POST['phonenum'];
+//     // ... add the rest of your form fields here
 
-    // Database credentials
-    $servername = "localhost";
-    $username = "username";
-    $password = "password";
-    $dbname = "orders";
+//     // Database credentials
+//     $servername = "localhost";
+//     $username = "username";
+//     $password = "password";
+//     $dbname = "orders";
 
-    try {
-        // Create connection
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        // Set the PDO error mode to exception
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//     try {
+//         // Create connection
+//         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+//         // Set the PDO error mode to exception
+//         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        // Prepare SQL statement
-        $sql = "INSERT INTO customer (firstname, lastname, email, phonenum) VALUES (?, ?, ?, ?)";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute([$firstname, $lastname, $email, $phonenum]);
+//         // Prepare SQL statement
+//         $sql = "INSERT INTO customer (firstname, lastname, email, phonenum) VALUES (?, ?, ?, ?)";
+//         $stmt = $conn->prepare($sql);
+//         $stmt->execute([$firstname, $lastname, $email, $phonenum]);
 
-        echo "New record created successfully";
-    } catch(PDOException $e) {
-        echo "Error: " . $e->getMessage();
-    }
+//         echo "New account created!";
+//     } catch(PDOException $e) {
+//         echo "Error: " . $e->getMessage();
+//     }
 
-    // Close connection
-    $conn = null;
-}
+//     // Close connection
+//     $conn = null;
+// }
 ?>
 
 <!DOCTYPE html>
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                 Create User Account
             </h1>
-                <form action="submit_registration.php" method="post" class="mt-4">               
+                <form action="index.php" method="post" class="mt-4">               
                     <!-- User Details -->
                     <label for="firstname">First name:</label><br>
                     <input type="text" name="firstname" id="firstname" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="First Name" required><br>
